@@ -13,7 +13,7 @@ const Button = (props) => {
 
 const Application = () => {
 
-  // your code here
+  const [name, setname] = useState(`[ Your Name ]`);
 
   const reset = () => {
     console.log("reset");
@@ -23,8 +23,9 @@ const Application = () => {
   return (
     <main>
       {/* your code here -- this entire line including the curly braces can be removed */}
+      <input placeholder='Type Your Name'></input>
       <Button reset={reset}>Reset</Button>
-      <h1>Hello React</h1>
+      <h1>Hello { name }</h1>
     </main>
   );
 };
